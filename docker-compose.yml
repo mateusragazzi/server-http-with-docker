@@ -1,7 +1,8 @@
 version: '3.3'
 
 services: 
-  php:
+  http-server:
+    container_name: http-server
     build: .
     ports:
     - "80:80"
@@ -11,6 +12,7 @@ services:
     links:
     - db
   db:
+    container_name: mysql-server
     image: mysql:5.7
     ports:
     - "3306:3306"
