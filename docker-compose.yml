@@ -14,13 +14,13 @@ services:
     - db
   db:
     container_name: mysql-server
-    image: mysql:5.7
+    image: mysql
     ports:
     - "3306:3306"
     volumes:
       - mysql-data:/var/lib/mysql
     environment:
     - MYSQL_ROOT_PASSWORD=root
-    restart: always
+    restart: always   
 volumes:
   mysql-data:
